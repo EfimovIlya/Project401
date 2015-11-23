@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Work number 4</title>
+  </head>
+<script src="jquery-2.1.0.min.js"></script>
+
+<script>
+	$(function(){
+		$('#send').click(function(){
+			var var1=$('#pole1').val();
+			var var2=$('#pole2').val();
+			$('#pole').load("/project401?var3="+var1+"&var4="+var2);	
+		});
+		
+	});
+</script>
+
+  <body>
+    <h1>Вывести в указанном диопазоне кодировку Unicod</h1>
+	<table >
+	<tr>
+	<td><input id="pole1" type="text"></td>
+	<td><input id="pole2" type="text"></td>
+	</tr>
+	<tr>
+	<td ROWSPAN=1> <input  id="send" type=submit value="Вывести"></td>
+	</tr>
+	</table>
+	<span style="color:blue" id="pole"> </span>
+
+  </body>
+</html>
